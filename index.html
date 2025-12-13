@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saurav Gopinath E K | Full-Stack Developer</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    
+    <!-- AOS - Animate on Scroll -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loader" id="loader">
+        <div class="loader-content">
+            <div class="loader-spinner"></div>
+            <p class="loader-text">Loading...</p>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursor-follower"></div>
+
+    <!-- Animated Background -->
+    <div class="animated-bg"></div>
+    
+    <!-- Floating Orbs -->
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+
+    <!-- Particles Background -->
+    <div id="particles-js"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="logo" onclick="scrollToSection('home')">
+                &lt;Saurav /&gt;
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>
+                    <span class="greeting">Hello, I'm</span>
+                    <span class="highlight">Saurav Gopinath E K</span>
+                </h1>
+                <p class="hero-subtitle">
+                    <span id="typed-output"></span>
+                    <span class="typed-cursor" id="typed-cursor">|</span>
+                </p>
+                <p class="hero-description">
+                    BTech Student passionate about building innovative web solutions using 
+                    <strong>React</strong>, <strong>Node.js</strong>, <strong>TypeScript</strong>, and <strong>AI technologies</strong>
+                </p>
+                <div class="cta-buttons">
+                    <a href="#projects" class="btn btn-primary">
+                        <i class="fas fa-rocket"></i> View My Work
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <i class="fas fa-paper-plane"></i> Get In Touch
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse" onclick="scrollToSection('about')"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up"><span>About Me</span></h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Get to know me better</p>
+            
+            <div class="about-content">
+                <div class="about-image" data-aos="fade-right" data-aos-delay="200">
+                    <div class="about-image-wrapper">
+                        <div class="profile-image">
+                            👨‍💻
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-text" data-aos="fade-left" data-aos-delay="300">
+                    <h3>BTech Student & Full-Stack Developer</h3>
+                    <p>
+                        Hello! I'm Saurav Gopinath E K, a passionate developer who loves turning ideas into reality through code. 
+                        I specialize in building modern web applications using cutting-edge technologies like React, Node.js, and TypeScript.
+                    </p>
+                    <p>
+                        I combine full-stack development with AI tools to build smarter, more efficient applications. From creating 
+                        AI-powered workflows to building professional websites, I enjoy solving real-world problems with innovative solutions.
+                    </p>
+                    
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <div class="stat-number" data-count="8">0</div>
+                            <div class="stat-label">Projects</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-count="44">0</div>
+                            <div class="stat-label">Contributions</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-count="8">0</div>
+                            <div class="stat-label">Repositories</div>
+                        </div>
+                    </div>
+
+                    <div class="tech-stack">
+                        <h4>Tech Stack</h4>
+                        <div class="tech-icons">
+                            <div class="tech-icon" data-tooltip="React">
+                                <i class="fab fa-react"></i>
+                            </div>
+                            <div class="tech-icon" data-tooltip="Node.js">
+                                <i class="fab fa-node-js"></i>
+                            </div>
+                            <div class="tech-icon" data-tooltip="TypeScript">
+                                <i class="fab fa-js"></i>
+                            </div>
+                            <div class="tech-icon" data-tooltip="Python">
+                                <i class="fab fa-python"></i>
+                            </div>
+                            <div class="tech-icon" data-tooltip="Bootstrap">
+                                <i class="fab fa-bootstrap"></i>
+                            </div>
+                            <div class="tech-icon" data-tooltip="Git">
+                                <i class="fab fa-git-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up"><span>My Projects</span></h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Showcasing my recent work</p>
+            
+            <div class="projects-filter" data-aos="fade-up" data-aos-delay="150">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web Apps</button>
+                <button class="filter-btn" data-filter="ai">AI/ML</button>
+                <button class="filter-btn" data-filter="data">Data</button>
+            </div>
+
+            <div class="projects-grid">
+                <div class="project-card" data-category="web" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-image">
+                        <i class="fas fa-utensils"></i>
+                        <div class="project-overlay">
+                            <a href="https://github.com/Sauravgopinathek/Food-Supply-Chain" target="_blank" title="View Code">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" title="Live Demo">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Food Supply Chain</h3>
+                        <p>A comprehensive food supply chain management system built with modern JavaScript frameworks for efficient distribution tracking.</p>
+                        <div class="project-tags">
+                            <span class="tag"><i class="fab fa-js"></i> JavaScript</span>
+                            <span class="tag"><i class="fab fa-node-js"></i> Node.js</span>
+                            <span class="tag">📦 Supply Chain</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="ai" data-aos="fade-up" data-aos-delay="250">
+                    <div class="project-image">
+                        <i class="fas fa-robot"></i>
+                        <div class="project-overlay">
+                            <a href="https://github.com/Sauravgopinathek/DevFlow-AI" target="_blank" title="View Code">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" title="Live Demo">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>DevFlow AI</h3>
+                        <p>An AI-powered development workflow tool designed to streamline and automate developer workflows with intelligent assistance.</p>
+                        <div class="project-tags">
+                            <span class="tag"><i class="fab fa-js"></i> JavaScript</span>
+                            <span class="tag">🤖 AI</span>
+                            <span class="tag">⚙️ Automation</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="web ai" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-image">
+                        <i class="fas fa-brain"></i>
+                        <div class="project-overlay">
+                            <a href="https://github.com/Sauravgopinathek/Deepthink-website" target="_blank" title="View Code">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" title="Live Demo">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Deepthink Website</h3>
+                        <p>A professionally built website using Bolt AI for the bolt.ai hackathon. Features modern TypeScript and AI-assisted design.</p>
+                        <div class="project-tags">
+                            <span class="tag"><i class="fab fa-js"></i> TypeScript</span>
+                            <span class="tag">🤖 Bolt AI</span>
+                            <span class="tag">🏆 Hackathon</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="ai" data-aos="fade-up" data-aos-delay="350">
+                    <div class="project-image">
+                        <i class="fas fa-cogs"></i>
+                        <div class="project-overlay">
+                            <a href="https://github.com/Sauravgopinathek/n8n-AI-Agent" target="_blank" title="View Code">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" title="Live Demo">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>n8n AI Agent</h3>
+                        <p>An intelligent AI Agent workflow using n8n automation platform. Demonstrates expertise in workflow automation and AI integration.</p>
+                        <div class="project-tags">
+                            <span class="tag">🤖 n8n</span>
+                            <span class="tag">🔄 Automation</span>
+                            <span class="tag">✨ AI Agent</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="data" data-aos="fade-up" data-aos-delay="400">
+                    <div class="project-image">
+                        <i class="fas fa-chart-line"></i>
+                        <div class="project-overlay">
+                            <a href="https://github.com/Sauravgopinathek/Expense-Tracker" target="_blank" title="View Code">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" title="Live Demo">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Expense Tracker Dashboard</h3>
+                        <p>Interactive expense tracker using Power BI with real-time personal expenses dataset. Features comprehensive data visualization.</p>
+                        <div class="project-tags">
+                            <span class="tag">📊 Power BI</span>
+                            <span class="tag">📈 Data Viz</span>
+                            <span class="tag">💰 Finance</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="web" data-aos="fade-up" data-aos-delay="450">
+                    <div class="project-image">
+                        <i class="fas fa-gamepad"></i>
+                        <div class="project-overlay">
+                            <a href="https://github.com/Sauravgopinathek/Snake-game-" target="_blank" title="View Code">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" title="Live Demo">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Snake Game</h3>
+                        <p>Classic snake game built using Windsurf AI during the DeepLearning.AI course. Demonstrates AI-assisted development.</p>
+                        <div class="project-tags">
+                            <span class="tag"><i class="fab fa-js"></i> JavaScript</span>
+                            <span class="tag">🎮 Game Dev</span>
+                            <span class="tag">🤖 AI-Assisted</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up"><span>My Skills</span></h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Technologies I work with</p>
+            
+            <div class="skills-container">
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+                    <div class="skill-icon">⚛️</div>
+                    <h3>Frontend Development</h3>
+                    <ul class="skill-list">
+                        <li class="skill-item">
+                            <i class="fab fa-react"></i>
+                            <span>React.js</span>
+                            <div class="skill-bar"><div class="skill-progress" data-progress="90"></div></div>
+                        </li>
+                        <li class="skill-item">
+                            <i class="fab fa-js"></i>
+                            <span>TypeScript</span>
+                            <div class="skill-bar"><div class="skill-progress" data-progress="85"></div></div>
+                        </li>
+                        <li class="skill-item">
+                            <i class="fab fa-bootstrap"></i>
+                            <span>Bootstrap 5</span>
+                            <div class="skill-bar"><div class="skill-progress" data-progress="90"></div></div>
+                        </li>
+                        <li class="skill-item">
+                            <i class="fab fa-css3-alt"></i>
+                            <span>Tailwind CSS</span>
+                            <div class="skill-bar"><div class="skill-progress" data-progress="85"></div></div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
+                    <div class="skill-icon">🚀</div>
+                    <h3>Backend & AI</h3>
+                    <ul class="skill-list">
+                        <li class="skill-item">
+                            <i class="fab fa-node-js"></i>
+                            <span>Node.js</span>
+                            <div class="skill-bar"><div class="skill-progress" data-progress="85"></div></div>
+                        </li>
+                        <li class="skill-item">
+                            <i class="fas fa-bolt"></i>
+                            <span>Express.js</span>
+                            <div class="skill-bar"><div class="skill-progress" data-progress="80"></div></div>
+                        </li>
+                        <li class="skill-item">
+                            <i class="fab fa-python"></i>
+                            <span>Python</span>
+                            <div class="skill-bar"><div class="skill-progress" data-progress="75"></div></div>
+                        </li>
+                        <li class="skill-item">
+                            <i class="fas fa-robot"></i>
+                            <span>AI/ML Integration</span>
+                            <div class="skill-bar"><div class="skill-progress" data-progress="70"></div></div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="400">
+                    <div class="skill-icon">🛠️</div>
+                    <h3>Tools & Data</h3>
+                    <ul class="skill-list">
+                        <li class="skill-item">
+                            <i class="fab fa-git-alt"></i>
+                            <span>Git & GitHub</span>
+                            <div class="skill-bar"><div class="skill-progress" data-progress="90"></div></div>
+                        </li>
+                        <li class="skill-item">
+                            <i class="fas fa-chart-bar"></i>
+                            <span>Power BI</span>
+                            <div class="skill-bar"><div class="skill-progress" data-progress="75"></div></div>
+                        </li>
+                        <li class="skill-item">
+                            <i class="fas fa-cogs"></i>
+                            <span>n8n Automation</span>
+                            <div class="skill-bar"><div class="skill-progress" data-progress="70"></div></div>
+                        </li>
+                        <li class="skill-item">
+                            <i class="fas fa-database"></i>
+                            <span>MongoDB</span>
+                            <div class="skill-bar"><div class="skill-progress" data-progress="75"></div></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up"><span>Get In Touch</span></h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Let's work together</p>
+            
+            <div class="contact-container">
+                <div class="contact-info" data-aos="fade-right" data-aos-delay="200">
+                    <h3>Let's Connect!</h3>
+                    <p>
+                        I'm always open to new opportunities, collaborations, and interesting conversations. 
+                        Whether you have a project in mind or just want to say hi, feel free to reach out!
+                    </p>
+                    
+                    <div class="contact-methods">
+                        <a href="mailto:sauravgopinathek@gmail.com" class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>sauravgopinathek@gmail.com</span>
+                        </a>
+                        <a href="https://github.com/Sauravgopinathek" target="_blank" class="contact-item">
+                            <i class="fab fa-github"></i>
+                            <span>github.com/Sauravgopinathek</span>
+                        </a>
+                        <a href="https://linkedin.com/in/saurav-gopinath-ek-996aa2279" target="_blank" class="contact-item">
+                            <i class="fab fa-linkedin"></i>
+                            <span>LinkedIn Profile</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <form class="contact-form" data-aos="fade-left" data-aos-delay="300" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" placeholder="John Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" placeholder="Tell me about your project..." required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">&lt;Saurav /&gt;</div>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/Sauravgopinathek" target="_blank" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/saurav-gopinath-ek-996aa2279" target="_blank" title="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="mailto:sauravgopinathek@gmail.com" title="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Saurav Gopinath E K. Built with ❤️ using HTML, CSS, JavaScript & AI</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#home" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Scripts -->
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+</body>
+</html>
