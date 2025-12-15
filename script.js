@@ -247,12 +247,11 @@ const typedOutput = document.getElementById('typed-output');
 const typedCursor = document.getElementById('typed-cursor');
 
 const phrases = [
-    'Full-Stack Developer',
-    'React & Node.js Developer',
+    'Web Developer',
     'AI Enthusiast',
-    'TypeScript Expert',
-    'Open Source Contributor',
-    'BTech Student'
+    'BTech Student',
+    'Problem Solver',
+    'Tech Explorer'
 ];
 
 let phraseIndex = 0;
