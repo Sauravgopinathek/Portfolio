@@ -1,5 +1,7 @@
 # Portfolio Website
 
+🔗 **Live Demo:** [https://fancy-chimera-3de625.netlify.app/](https://fancy-chimera-3de625.netlify.app/)
+
 A modern, responsive portfolio website built with HTML, CSS, and JavaScript.
 
 ## Features
